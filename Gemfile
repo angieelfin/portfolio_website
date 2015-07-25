@@ -3,6 +3,9 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
+gem "middleman-slim", "~>0.2.2"
+gem "jquery-middleman", "~>3.1.2"
+gem "scss_lint", require: false
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
