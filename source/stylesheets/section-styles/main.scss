@@ -20,6 +20,7 @@
     right: 0;
     bottom: 0;
   }
+
   h1 {
     font-size: 112px;
     font-weight: 300;
@@ -28,6 +29,7 @@
     margin-top: $base-unit;
     margin-bottom: 4 * $base-unit;
   }
+
   h3 {
     font-size: 37px;
     color: $grey;
@@ -37,6 +39,7 @@
     
   }
 }
+
 .section-1:before {
   background-color: $white;
   content: "";
@@ -46,6 +49,7 @@
   height: 300px;
   width: 200%;
 }
+
 .section-1:after {
   background-color: $white;
   content: "";
@@ -56,6 +60,42 @@
   height: 300px;
   width: 200%;
 }
+
 .section-content {
   margin-top: 10%;
+}
+
+.menu {
+  width: 100%;
+  height: 0px;
+  background-color: $white;
+  border-bottom: none;
+  transition: height 0.2s ease;
+}
+
+.menu-item {
+  display: none;
+  margin-top: 2 * $base-unit;
+  font-size: 37px;
+  color: $grey;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-family: 'bonvenocflight';
+  text-transform: uppercase;
+  padding: $base-unit 6 * $base-unit;
+  text-decoration: none;
+  border-bottom: none;
+  transition: border-bottom .2s;
+  &:hover {
+    border-bottom: 2px solid $grey;
+  } 
+}
+
+.menu-active-js {
+  height: 125px;
+  border-bottom: 1px solid $grey;
+  transition: height 0.2s ease;
+  .menu-item {
+    display: inline-block;
+  }
 }
