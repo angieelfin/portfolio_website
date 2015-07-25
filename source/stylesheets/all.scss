@@ -4,6 +4,8 @@
 @import 'fonts';
 
 /* import components */
+@import 'components/buttons';
+@import 'components/icons';
 
 /* import section styles */
 @import 'section-styles/main';
@@ -13,3 +15,15 @@
 @import 'section-styles/footer';
 
 /* import media queries */
+
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+button {
+  font-family: 'bonvenocflight';
+  text-transform: uppercase;
+  margin: 0;
+}

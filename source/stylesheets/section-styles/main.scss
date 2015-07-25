@@ -1,4 +1,61 @@
-h1 {
-  color: $sea-green;
-  font-family: 'Lato';
+.logo {
+  width: 62px;
+  height: 60px;
+}
+.section-1 {
+  position: relative;
+  background-image: url('../images/heroimage.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  width: 100%;
+  text-align: center;
+  overflow:hidden;
+
+  .section-1-overlay {
+    background-color: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  h1 {
+    font-size: 112px;
+    font-weight: 300;
+    color: $grey;
+    letter-spacing: $base-unit;
+    margin-top: $base-unit;
+    margin-bottom: 4 * $base-unit;
+  }
+  h3 {
+    font-size: 37px;
+    color: $grey;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-top: $base-unit;
+    
+  }
+}
+.section-1:before {
+  background-color: $white;
+  content: "";
+  position: absolute;
+  left: 5%;
+  transform: rotate(45deg);
+  height: 300px;
+  width: 200%;
+}
+.section-1:after {
+  background-color: $white;
+  content: "";
+  position: absolute;
+  right: 35%;
+  top: 10%;
+  transform: rotate(45deg);
+  height: 300px;
+  width: 200%;
+}
+.section-content {
+  margin-top: 10%;
 }
