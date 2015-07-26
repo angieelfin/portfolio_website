@@ -1,29 +1,27 @@
 @charset 'utf-8';
-/* import variables */
+// import variables 
 @import 'variables';
+@import 'basic-styles';
 @import 'fonts';
+@import 'utilities';
 
-/* import components */
+// import components 
 @import 'components/buttons';
 @import 'components/icons';
 
-/* import section styles */
+// import section styles 
 @import 'section-styles/main';
 @import 'section-styles/about';
 @import 'section-styles/work';
 @import 'section-styles/contact';
 @import 'section-styles/footer';
 
-/* import media queries */
+// import fontello icons
+@import 'social-icons/fontello';
+@import 'social-icons/fontello-ie7';
+@import 'social-icons/fontello-ie7-codes';
+@import 'social-icons/fontello-codes';
+@import 'social-icons/fontello-embedded';
 
-body {
-  margin: 0;
-}
-h1,
-h2,
-h3,
-button {
-  font-family: 'bonvenocflight';
-  text-transform: uppercase;
-  margin: 0;
-}
+// import media queries
+

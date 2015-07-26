@@ -1,21 +1,11 @@
-.section-2 {
-  position: relative;
+.section-2-about {
+  @extend .section-bg;
   background-image: url('../images/about.jpg');
-  background-size: 678px 700px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 700px;
-  width: 100%;
   text-align: right;
-  overflow:hidden;
 
   .section-2-overlay {
+    @extend .overlay;
     background-color: rgba(255, 255, 255, .3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
   }
 
   .section-content {
@@ -24,24 +14,20 @@
     max-width: 50%;
     float: right;
     z-index: 1;
-    padding-top: 50px;
-
+    padding-top: 5 * $base-unit;
   }
 
   h2 {
-    position: absolute;
+    @extend .section-heading;
     left: 35%;
     top: 10px;
-    font-size: $large-font;
-    font-weight: 300;
     color: $sea-green;
-    letter-spacing: $base-unit;
-    margin-bottom: 20px;
+    margin-bottom: 2 * $base-unit;
   }
 
   p {
     display: inline-block;
-    padding-right: 50px;
+    padding-right: 5 * $base-unit;
     font-size: $basic-font-small;
     font-family: 'Lato';
     padding-left: 2 * $base-unit;
@@ -49,27 +35,15 @@
   }
 }
 
-.section-2:before {
-  background-color: $white;
-  content: "";
-  position: absolute;
-  right: -50%;
+.section-2-about:before {
+  @extend .triangle-pseudoclass;
+  right: -57%;
   top: 40%;
   transform: rotate(-65deg);
   height: 500px;
   width: 200%;
   z-index: 0;
 }
-
-.cv-button {
-  margin-top: 2 * $base-unit;
-  padding: 10px 50px;
-}
-
-.bold-text {
-  font-weight: 700;
-}
-
-.sea-green-text {
+.sea-green-letters {
   color: $sea-green;
 }

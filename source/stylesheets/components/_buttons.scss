@@ -1,9 +1,9 @@
 button,
 button::after {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
 button {
@@ -28,25 +28,47 @@ button:hover {
   color: $white;
   z-index: 1;
 }
+
 button:focus {
   outline: none;
 }
+
 .ghost-button {
- overflow: hidden;
+  overflow: hidden;
 }
 
 .ghost-button::after {
-  /*background-color: #f00;*/
   height: 100%;
   left: -35%;
   top: 0;
   transform: skew(40deg);
-  transition-duration: 0.6s;
+  transition-duration: .6s;
   transform-origin: top right;
-  width: 0px;
+  width: 0;
 }
 
 .ghost-button:hover:after {
   height: 100%;
   width: 135%;
-} 
+}
+
+.narrow-button {
+  margin-top: 2 * $base-unit;
+  padding: 10px 50px;
+  
+}
+.send-button {
+  background-color: $white;
+  border: 2px solid white;
+  color: $sea-green;
+  margin-top: 2 * $base-unit;
+  padding: 10px 30px;
+  &::before,
+  &::after {
+    background: $sea-green;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+}
