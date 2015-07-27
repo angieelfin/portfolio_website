@@ -1,1 +1,38 @@
-  
+@import 'section-styles/work';
+
+@media screen and (max-width: 840px) {
+
+  .section-3-work {
+      height: 640px;
+
+      h2 {
+        font-size: $mq-large-font !important;
+    }
+  }
+
+  .section-3-work:after {
+    right: -15%;
+    top: 20%;
+    transform: rotate(45deg);
+    }
+}  
+
+
+@media screen and (max-width: 596px) {
+
+  .section-3-work {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .section-3-work {
+    height: 400px;
+
+      h2 {
+        font-size: $mq-big-font !important;
+        margin-left: 20%;
+    }
+  }
+}

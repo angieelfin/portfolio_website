@@ -1,1 +1,64 @@
- 
+@import 'section-styles/about';
+
+@media screen and (max-width: 840px) {
+
+  .section-2-about {
+
+    p {
+      font-size: 14px;
+    }
+  }
+} 
+
+@media screen and (max-width: 659px) {
+
+  .section-2-about {
+
+    p {
+      font-size: $mq-basic-font-small;
+      padding-right: 0;
+    }
+
+    h2 {
+      right: $base-unit;
+      font-size: $mq-large-font !important;
+    } 
+
+    .section-content {
+      max-width: 50%;
+      padding-top: 5 * $base-unit;
+      padding-right: $base-unit;
+    }
+  }
+  
+  .section-2-about:before {
+    right: -77%;
+    top: 30%;
+    transform: rotate(-75deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .section-2-about {
+
+    h2 {
+      margin-top: 55%;
+      font-size: $mq-big-font !important;
+    }
+
+    .section-content {
+      max-width: 100%;
+      margin-top: 60%;
+    }
+  }
+  
+  .section-2-about:before {
+    right: -47%;
+    top: 40%;
+    transform: rotate(-20deg);
+    height: 500px;
+    width: 200%;
+    z-index: 0;
+  }
+}

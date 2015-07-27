@@ -1,0 +1,20 @@
+@media screen and (max-width: 890px) {
+  .heading {
+    font-weight: 300;
+    color: $grey;
+    letter-spacing: $base-unit;
+  }
+  .sub-heading {
+    font-size: $mq-medium-font;
+    color: $grey;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  .section-heading {
+    position: absolute;
+    font-size: $mq-large-font;
+    font-weight: 300;
+    letter-spacing: $base-unit;
+  }
+    
+}

@@ -5,6 +5,16 @@
 @import 'fonts';
 @import 'utilities';
 
+
+// import media queries
+
+@import 'mediaqueries/mq-main';
+@import 'mediaqueries/mq-about';
+@import 'mediaqueries/mq-work';
+@import 'mediaqueries/mq-contact';
+@import 'mediaqueries/mq-footer';
+@import 'mediaqueries/mq-basic-styles';
+
 // import components 
 @import 'components/buttons';
 @import 'components/icons';
@@ -22,6 +32,3 @@
 @import 'social-icons/fontello-ie7-codes';
 @import 'social-icons/fontello-codes';
 @import 'social-icons/fontello-embedded';
-
-// import media queries
-

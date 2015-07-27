@@ -1,1 +1,67 @@
+@import 'section-styles/contact';
+
+@media screen and (max-width: 890px) {
   
+  .section-4-contact {
+
+    .section-content {
+      margin-top: 15%;
+    }
+  }
+}  
+
+@media screen and (max-width: 710px) {
+  .section-4-contact {
+    background-color: $sea-green;
+    background-image: none;
+
+    .section-4-overlay {
+      background-color: transparent;
+    }
+
+    .section-content {
+      float: left;
+      max-width: 100%;
+      margin-left: 20%;
+      margin-top: 20%;
+    }
+  }
+
+  .section-4-contact:before {
+    display: none;
+  }
+}  
+
+@media screen and (max-width: 596px) {
+
+  .section-4-contact {
+
+    h2 {
+      right: -8%;
+    }
+
+    .section-content {
+      float: left;
+      max-width: 100%;
+      margin-left: 15%;
+    }
+  }
+} 
+@media screen and (max-width: 480px) {
+
+  .section-4-contact {
+    h2 {
+      font-size: $mq-big-font !important;
+      top: -10%;
+      right: 0%;
+    }
+
+    .section-content {
+      padding-top: $base-unit;
+    }
+  }
+
+  .form-input {
+    width: 250px;
+  }
+}  

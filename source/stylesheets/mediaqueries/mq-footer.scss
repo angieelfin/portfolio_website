@@ -1,1 +1,7 @@
-  
+@import 'section-styles/footer';
+
+@media screen and (max-width: 480px) {
+  .social-icons {
+    font-size: $mq-basic-font-big;
+  }
+}
