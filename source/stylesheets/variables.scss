@@ -1,30 +1,30 @@
-/* Typography - font sizes */
+// Typography - font sizes
 
-/* headings */
-$large-font: 100px;
-/* subheadings */
+// headings
+$large-font: 80px;
+// subheadings
 $medium-font: 54px;
-/* buttons, footer content */
+// buttons, footer content
 $basic-font-big: 18.5px;
-/* content */
+// content
 $basic-font-small: 16px;
 
 
-/* Colors */
+// colors
 $white: #fff;
 $grey: #808080;
-$sea-green: #52BEBE;
+$sea-green: #52bebe;
 
-/* units */
+// units
 $base-unit: 10px;
 
 // mediaqueries font-sizes
-/* headings */
+// headings
 $mq-large-font: 80px;
-/* subheadings */
+// subheadings
 $mq-big-font: 50px;
 $mq-medium-font: 25px;
-/* buttons, footer content */
+// buttons, footer content
 $mq-basic-font-big: 16px;
-/* content */
+// content
 $mq-basic-font-small: 12px;

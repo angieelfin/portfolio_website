@@ -14,6 +14,11 @@ button {
   padding: 15px 35px;
   position: relative;
   cursor: pointer;
+
+  a {
+    color: $grey;
+    text-decoration: none;
+  }
 }
 
 button::before,
@@ -27,6 +32,10 @@ button::after {
 button:hover {
   color: $white;
   z-index: 1;
+
+  a {
+    color: $white;
+  }
 }
 
 button:focus {
@@ -55,14 +64,15 @@ button:focus {
 .narrow-button {
   margin-top: 2 * $base-unit;
   padding: 10px 50px;
-  
 }
+
 .send-button {
   background-color: $white;
-  border: 2px solid white;
+  border: 2px solid $white;
   color: $sea-green;
   margin-top: 2 * $base-unit;
   padding: 10px 30px;
+
   &::before,
   &::after {
     background: $sea-green;
@@ -71,4 +81,16 @@ button:focus {
     z-index: -1;
   }
 
+}
+
+.white-button {
+  background-color: $white;
+  border: 2px solid $white;
+  color: $white;
+  margin-top: 2 * $base-unit;
+  padding: 10px 30px;
+
+  a {
+    color: $grey !important;
+  }
 }

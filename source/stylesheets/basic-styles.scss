@@ -1,6 +1,7 @@
 body {
   margin: 0;
 }
+
 h1,
 h2,
 h3,
@@ -9,14 +10,16 @@ button {
   text-transform: uppercase;
   margin: 0;
 }
+
 .section-bg {
   position: relative;
   background-size: cover;
   background-attachment: fixed;
-  height: 700px;
+  height: 720px;
   width: 100%;
   overflow: hidden;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -24,25 +27,45 @@ button {
   right: 0;
   bottom: 0;
 }
+
 .heading {
   font-weight: 300;
   color: $grey;
   letter-spacing: $base-unit;
 }
+
 .sub-heading {
   font-size: 37px;
   color: $grey;
   font-weight: 100;
   letter-spacing: 3px;
 }
+
 .section-heading {
   position: absolute;
   font-size: $large-font;
   font-weight: 300;
   letter-spacing: $base-unit;
 }
+
 .triangle-pseudoclass {
   background-color: $white;
   content: '';
   position: absolute;
+}
+
+.ghost-button {
+  opacity: 0;
+  transform: translate (0, -20px);
+
+  &.btn-appear {
+    opacity: 1;
+    transform: translate (0, 0);
+    transition: all .5s ease-in-out;
+  }
+}
+
+.subsection-basic {
+  position: relative;
+  z-index: 2;
 }

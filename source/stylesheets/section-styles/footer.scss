@@ -9,38 +9,50 @@
   text-transform: uppercase;
   height: 360px;
   text-align: center;
+
   .logo {
     margin-bottom: 3*$base-unit;
   }
+
   .rights {
     position: relative;
     top: 4 * $base-unit;
   }
 }
+
 .social-icons {
   font-size: 20px;
   margin: 2 * $base-unit;
 }
+
 .social-icon {
   border: 2px solid $grey;
   border-radius: 50%;
   padding: 8px 5px;
   height: 20px;
-  margin: 100px 10px;
+  margin: $base-unit;
   cursor: pointer;
   opacity: 0;
   transform: translate(-20px);
+
   &:hover {
     border: 2px solid $sea-green;
     color: $sea-green;
     transition: all .2s ease;
   }
+
   &.is-showing {
     opacity: 1;
-    transform: translate(0px);
+    transform: translate(0);
     transition: all .3s ease-in-out;
   }
 }
+
 .icon-github {
   padding-right: 8px;
+}
+
+.col-1,
+.col-2 {
+  display: inline;
 }

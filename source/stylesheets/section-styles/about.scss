@@ -19,7 +19,7 @@
 
   h2 {
     @extend .section-heading;
-    left: 35%;
+    left: 55%;
     top: 10px;
     color: $sea-green;
     margin-bottom: 2 * $base-unit;
@@ -33,6 +33,10 @@
     padding-left: 2 * $base-unit;
     margin: $base-unit;
   }
+
+  button {
+    @extend .ghost-button;
+  }
 }
 
 .section-2-about:before {
@@ -44,6 +48,7 @@
   width: 200%;
   z-index: 0;
 }
+
 .sea-green-letters {
   color: $sea-green;
 }

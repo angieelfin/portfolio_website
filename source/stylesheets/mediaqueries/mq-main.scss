@@ -7,11 +7,17 @@
 @media screen and (max-width: 1110px) {
   .logo-header {
     padding-left: 10 * $base-unit;
-  }   
+  }
+}
+// devices with max 1024 px width
+@media screen and (max-width: 1024px) {
+  .section-1-header {
+    height: 768px;
+  }
 }
 
 // devices with max 840 px width
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 940px) {
   .section-1-header {
     height: 640px;
   }
@@ -29,7 +35,7 @@
     transform: rotate(45deg);
     height: 300px;
     width: 200%;
-  } 
+  }
 
   .portfolio-heading {
     font-size: $mq-large-font !important;
@@ -61,17 +67,17 @@
 
   .logo-header {
     padding-left: 0;
-  }  
+  }
 
   .portfolio-heading {
     font-size: 60px !important;
-  }   
+  }
 }
 
 // devices with max 480px width
 @media screen and (max-width: 480px) {
 
-   .section-1-header {
+  .section-1-header {
     .section-content {
       margin-top: 40%;
     }
@@ -84,7 +90,7 @@
     width: 200%;
   }
 
-   .section-1-header:after {
+  .section-1-header:after {
     right: 35%;
     top: 60%;
     transform: rotate(45deg);
@@ -94,10 +100,28 @@
 
   .portfolio-heading {
     font-size: 48px !important;
-  }  
+  }
 }
 
+@media screen and (max-width: 365px) {
 
+
+  .section-1-header:before {
+    left: 20%;
+    top: -10%;
+    transform: rotate(45deg);
+    height: 300px;
+    width: 200%;
+  }
+
+  .section-1-header:after {
+    right: 35%;
+    top: 60%;
+    transform: rotate(45deg);
+    height: 300px;
+    width: 200%;
+  }
+}
 // menu styling 790px width
 
 @media screen and (max-width: 790px) {
