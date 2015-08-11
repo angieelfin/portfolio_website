@@ -1,0 +1,231 @@
+.gallery {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.gallery li {
+  display: inline-block;
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 $base-unit $base-unit;
+}
+
+.gallery li img,img {
+  width: 250px;
+  height: auto;
+}
+
+.crop {
+  position: relative;
+  height: 180px; 
+  width: 250px; 
+  overflow: hidden;
+  &:hover {
+    .tint {
+      display: block;
+    }
+  }
+}
+
+.crop img {
+  height: auto; 
+  width: 250px;
+
+}
+
+.tint {
+  display: none;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: 'bonvenocflight';
+    padding: 10px;
+  }
+}
+
+.close {
+  position: fixed;
+  top: 0em;
+  right: 0.5em;
+  font-size: 2.5em;
+  text-decoration: none;
+  color: $grey;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.gallery-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: auto;
+  animation: in 200ms 1 ease;
+  overflow: auto;
+  background: #fff;
+  text-align: center;
+}
+
+.inactive {
+  animation: out 200ms 1 ease;
+}
+
+@keyframes in {
+  0% {
+    transform: scale(0.2)
+  }
+}
+
+@keyframes out {
+  100% {
+    transform: scale(0.05)
+  }
+}
+
+.video-preview{
+  width: 100vw;
+  height: 100vh;
+  border:none;
+}
+
+.gallery-active img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.gallery-heading {
+  @extend .sub-heading;
+  position: relative;
+  z-index: 1;
+  color: $grey;
+  margin: 20px 0 20px 100px;
+}
+
+.arrow-back a {
+  color: $grey;
+  float: left;
+  font-size: 30px;
+  top: 20px;
+  margin-left: 2 * $base-unit;
+  text-decoration: none;
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 810px) {
+  .illustrations-gallery,
+  .branding-gallery,
+  .web-gallery {
+    &:before {
+      display: none;
+    }
+  }
+  .gallery-heading {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .arrow-back a {
+    font-size: 30px;
+    top: 15px;
+  }
+}
+
+@media (max-width:768px) {
+  .gallery{
+    max-width: 100%;
+  }
+
+  
+
+  .gallery-active img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .video-preview{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100vw;
+    height: 50vh;
+    border:none;
+  }
+
+  .close{
+    color: $grey;
+  } 
+}
+
+.gallery-site {
+  overflow: hidden;
+  position: relative;
+}
+
+.illustrations-gallery,
+.branding-gallery,
+.web-gallery {
+  position: static;
+  overflow: hidden;
+  
+  &:before {
+    @extend .triangle-pseudoclass;
+    background-color: lighten($grey, 45%);
+    transform: rotate(-75deg);
+    height: 800px;
+    width: 300%;
+    z-index: 0;
+    right: -57%;
+    top: 25%;
+  }
+}
+
+@media (max-width: 965px) {
+  .illustrations-gallery,
+  .branding-gallery,
+  .web-gallery {
+    &:before {
+      transform: rotate(-65deg);
+      right: -30%;
+      top: 22%;
+    }
+  }
+}
