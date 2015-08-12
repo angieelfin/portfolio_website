@@ -46,10 +46,8 @@ $(document).ready(function(){
       }
     }
 
-
-
   });
-  
+  // opening work section
   $('.view-work').on('click',function (e) {
       e.preventDefault();
       $('.work-subsections').slideToggle();
@@ -64,7 +62,6 @@ $(document).ready(function(){
 
 
 // galleries
-
   $('.thumbox').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
@@ -73,13 +70,11 @@ $(document).ready(function(){
       $('.gallery').append('<div class="gallery-active"><img src="' + img + '" /><span class="close"">&times;</span></div>');
   });
 
-$('.gallery').delegate('.close', 'click', function() {
-  $('.gallery-active').addClass('inactive');
-  setTimeout(function() {
-    $('.gallery-active').remove();
-  }, 200);
-});
-
+  $('.gallery').delegate('.close', 'click', function() {
+    $('.gallery-active').addClass('inactive');
+    setTimeout(function() {
+      $('.gallery-active').remove();
+    }, 200);
   });
 
-
+});

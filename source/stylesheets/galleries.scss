@@ -16,16 +16,18 @@
   margin: 0 $base-unit $base-unit;
 }
 
-.gallery li img,img {
+.gallery li img,
+img {
   width: 250px;
   height: auto;
 }
 
 .crop {
   position: relative;
-  height: 180px; 
-  width: 250px; 
+  height: 180px;
+  width: 250px;
   overflow: hidden;
+
   &:hover {
     .tint {
       display: block;
@@ -34,7 +36,7 @@
 }
 
 .crop img {
-  height: auto; 
+  height: auto;
   width: 250px;
 
 }
@@ -47,10 +49,11 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, .8);
-  color: white;
+  color: $white;
+
   a {
     display: block;
-    color: white;
+    color: $white;
     text-decoration: none;
     font-family: 'bonvenocflight';
     padding: 10px;
@@ -59,8 +62,8 @@
 
 .close {
   position: fixed;
-  top: 0em;
-  right: 0.5em;
+  top: 0;
+  right: .5em;
   font-size: 2.5em;
   text-decoration: none;
   color: $grey;
@@ -83,7 +86,7 @@
   margin: auto;
   animation: in 200ms 1 ease;
   overflow: auto;
-  background: #fff;
+  background: $white;
   text-align: center;
 }
 
@@ -93,20 +96,14 @@
 
 @keyframes in {
   0% {
-    transform: scale(0.2)
+    transform: scale(.2);
   }
 }
 
 @keyframes out {
   100% {
-    transform: scale(0.05)
+    transform: scale(.05);
   }
-}
-
-.video-preview{
-  width: 100vw;
-  height: 100vh;
-  border:none;
 }
 
 .gallery-active img {
@@ -149,11 +146,13 @@
       display: none;
     }
   }
+  
   .gallery-heading {
     margin: 0;
     padding-top: 20px;
     text-align: center;
   }
+
   .arrow-back a {
     font-size: 30px;
     top: 15px;
@@ -161,11 +160,9 @@
 }
 
 @media (max-width:768px) {
-  .gallery{
+  .gallery {
     max-width: 100%;
   }
-
-  
 
   .gallery-active img {
     position: absolute;
@@ -178,21 +175,9 @@
     height: auto;
   }
 
-  .video-preview{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100vw;
-    height: 50vh;
-    border:none;
-  }
-
-  .close{
+  .close {
     color: $grey;
-  } 
+  }
 }
 
 .gallery-site {
@@ -203,9 +188,9 @@
 .illustrations-gallery,
 .branding-gallery,
 .web-gallery {
-  position: static;
   overflow: hidden;
-  
+  position: static;
+
   &:before {
     @extend .triangle-pseudoclass;
     background-color: lighten($grey, 45%);

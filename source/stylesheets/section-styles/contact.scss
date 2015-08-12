@@ -64,8 +64,12 @@
   font-family: 'bonvenocflight';
   font-weight: 300;
   color: $white;
-  text-transform: uppercase;
   outline: none;
+}
+
+.error {
+  font-family: 'bonvenocflight';
+  font-size: 12px;
 }
 
 .message {
