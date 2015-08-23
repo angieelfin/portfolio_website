@@ -1,0 +1,118 @@
+.gallery {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+
+  .wrapper {
+    display: inline-block;
+    width: 250px;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 $base-unit $base-unit;
+  }
+}
+
+.gallery .wrapper .thumb-box,
+.thumb-box {
+  width: 250px;
+  height: auto;
+}
+
+.wrapper {
+  position: relative;
+  height: 180px;
+  width: 250px;
+  overflow: hidden;
+
+  &:hover {
+    .tint {
+      display: block;
+    }
+  }
+}
+
+.wrapper .thumb-box {
+  height: auto;
+  width: 250px;
+
+}
+
+.tint {
+  display: none;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .8);
+  color: $white;
+
+  a {
+    display: block;
+    color: $white;
+    text-decoration: none;
+    font-family: 'bonvenocflight';
+    padding: 10px;
+  }
+}
+
+.close {
+  position: fixed;
+  top: 0;
+  right: .5em;
+  font-size: 2.5em;
+  text-decoration: none;
+  color: $alt;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.gallery-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100vw !important;
+  margin: auto;
+  animation: in 200ms 1 ease;
+  overflow: auto;
+  background: $white;
+  text-align: center;
+  img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.inactive {
+  animation: out 200ms 1 ease;
+}
+
+@keyframes in {
+  0% {
+    transform: scale(.2);
+  }
+}
+
+@keyframes out {
+  100% {
+    transform: scale(.05);
+  }
+}
+
+.gallery-heading {
+  position: relative;
+  z-index: 1;
+  color: $alt;
+  margin: 20px 0 50px 50px;
+}

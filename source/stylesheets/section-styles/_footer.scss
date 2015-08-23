@@ -1,0 +1,65 @@
+.section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $alt;
+  font-family: 'bonvenocflight';
+  font-size: $basic-font-big;
+  text-transform: uppercase;
+  height: 360px;
+  text-align: center;
+
+  .logo {
+    margin: 0 auto;
+  }
+}
+
+.social-icons {
+  font-size: 20px;
+
+  a,
+  a:visited {
+    color: $alt;
+  }
+}
+
+.icon-circle {
+  border: 2px solid $alt;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-table;
+  margin: 0 $base-unit;
+  transform: translate(-20px);
+  opacity: 0;
+
+  &:hover {
+    border: 2px solid $brand;
+    transition: all .1s ease;
+
+    .social-icon {
+      color: $brand;
+    }
+  }
+
+  &.is-showing {
+    opacity: 1;
+    transform: translate(0);
+    transition: all .3s ease-in-out;
+  }
+}
+
+.social-icon {
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.icon-github {
+  padding-right: 3px;
+}
+
+.rights-paragraph {
+  position: relative;
+  top: 4 * $base-unit;
+}

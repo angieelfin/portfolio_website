@@ -1,0 +1,74 @@
+.section-contact {
+  background-image: url('../images/contact.jpg');
+  text-align: right;
+
+  .section-overlay {
+    background-color: rgba(255, 255, 255, .6);
+  }
+
+  .section-heading {
+    right: 30px;
+  }
+
+  .section-contact-content {
+    position: relative;
+    color: $white;
+    text-align: center;
+    float: right;
+    z-index: 1;
+  }
+
+  .ghost-button {
+    opacity: 1;
+  }
+}
+
+.section-contact:before {
+  background-color: $brand;
+  content: '';
+  position: absolute;
+  left: -20%;
+  top: 20%;
+  transform: rotate(-75deg);
+  height: 1000px;
+  width: 200%;
+  z-index: 1;
+}
+
+.contact-info {
+  font-family: 'Lato';
+  font-size: 14px;
+  text-align: left;
+}
+
+// form styling
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $brand;
+  width: 350px;
+}
+
+.form-input {
+  background-color: $brand;
+  border: 2px solid $white;
+  padding: $base-unit 2 * $base-unit;
+  margin: $base-unit 0;
+  width: auto;
+  font-size: $basic-font-small;
+  font-family: 'bonvenocflight';
+  font-weight: 300;
+  color: $white;
+  outline: none;
+}
+
+.input-message {
+  height: 170px;
+}
+
+// input color
+
+::-webkit-input-placeholder {
+  color: $white;
+  opacity: .8;
+}

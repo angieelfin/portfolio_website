@@ -1,0 +1,44 @@
+.section-header {
+  background-image: url('../images/desk.jpg');
+  text-align: center;
+
+  .section-overlay {
+    background-color: rgba(255, 255, 255, .8);
+  }
+
+  .section-header-content {
+    display: block;
+  }
+
+  .header-title {
+    font-size: 112px;
+    margin-top: $base-unit;
+    margin-bottom: 4 * $base-unit;
+  }
+}
+
+.section-header:before {
+  @include triangle-pseudoclass;
+  left: 5%;
+  transform: rotate(45deg);
+  height: 300px;
+  width: 200%;
+}
+
+.section-header:after {
+  @include triangle-pseudoclass;
+  right: 35%;
+  top: 10%;
+  transform: rotate(45deg);
+  height: 300px;
+  width: 200%;
+}
+
+.logo {
+  height: 60px;
+  width: 62px;
+}
+
+.logo-header {
+  padding-left: 10 * $base-unit;
+}

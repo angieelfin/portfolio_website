@@ -1,29 +1,27 @@
 button,
 button::after {
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
   transition: all .3s;
 }
 
 button {
   background: none;
-  border: 2px solid $grey;
-  color: $grey;
+  border: 2px solid $alt;
+  color: $alt;
   font-size: $basic-font-big;
-  padding: 15px 35px;
+  width: 200px;
+  height: 60px;
   position: relative;
   cursor: pointer;
 
   a {
-    color: $grey;
+    color: $alt;
     text-decoration: none;
   }
 }
 
 button::before,
 button::after {
-  background: $grey;
+  background: $alt;
   content: '';
   position: absolute;
   z-index: -1;
@@ -61,36 +59,122 @@ button:focus {
   width: 135%;
 }
 
-.narrow-button {
-  margin-top: 2 * $base-unit;
-  padding: 10px 50px;
-}
+
 
 .send-button {
   background-color: $white;
   border: 2px solid $white;
-  color: $sea-green;
+  color: $brand;
   margin-top: 2 * $base-unit;
-  padding: 10px 30px;
+  width: auto;
 
   &::before,
   &::after {
-    background: $sea-green;
+    background: $brand;
     content: '';
     position: absolute;
     z-index: -1;
   }
+}
+
+.small-button {
+  font-size: 15px;
+  width: 150px;
+  height: 40px;
+  padding: 0;
+}
+@media screen and (max-width: 528px) {
 
 }
 
-.white-button {
-  background-color: $white;
-  border: 2px solid $white;
-  color: $white;
-  margin-top: 2 * $base-unit;
-  padding: 10px 30px;
+// menu button
+.menu-button {
+  margin: 30px 20px;
+  float: right;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  z-index: 1;
 
-  a {
-    color: $grey !important;
+  .bar-top,
+  .bar-bottom {
+    width: 52px;
+    animation: scales .6s;
+
+    .bar-left {
+      width: 52%;
+      height: 4px;
+      background: $alt;
+      display: inline-block;
+      margin-right: 0;
+      position: relative;
+      transition: all .2s;
+    }
+
+    .bar-right {
+      width: 52%;
+      height: 4px;
+      background: $alt;
+      display: inline-block;
+      margin-right: -4px;
+      position: relative;
+      transition: all .2s;
+    }
+  }
+
+  .bar-middle {
+    width: 54px;
+    height: 0;
+    display: inline-block;
+    border: 2px solid $alt;
+    box-sizing: border-box;
+    animation: scales .5s;
+  }
+}
+
+.menu-button.active {
+  padding-top: 5px;
+  box-sizing: border-box;
+  
+  .bar-top {
+    animation: scales .5s;
+
+    .bar-left {
+      transform: rotate(45deg) scale(1.2);
+      left: 4px;
+      top: 0;
+      border-radius: 5px;
+    }
+
+    .bar-right {
+      transform: rotate(-45deg) scale(1.2);
+      right: 4px;
+      top: 1px;
+      border-radius: 5px;
+    }
+  }
+
+  .bar-middle {
+    display: none;
+  }
+
+  .bar-bottom {
+    animation: scales .5s;
+
+    .bar-left {
+      transform: rotate(-45deg) scale(1.2);
+      left: 4px;
+      top: 2px;
+      border-radius: 5px;
+    }
+
+    .bar-right {
+      transform: rotate(45deg) scale(1.2);
+      right: 4px;
+      top: 1px;
+      border-radius: 5px;
+    }
   }
 }

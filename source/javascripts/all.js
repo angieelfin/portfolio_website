@@ -18,25 +18,26 @@ $(document).ready(function(){
  
 
 // menu icon animation
-  $('.menu-icon').click(function(){
+
+  $('.menu-button').on('click', function(){
     $(this).toggleClass('active');
-    $('.menu').toggleClass('menu-active-js');
+    $('.menu').toggleClass('js-menu-active');
   });
 
 // footer icons animation
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
-    if(wScroll > $('.section-5-footer').offset().top - ($(window).height()/1.7)) {
-        $('.social-icon').each(function(i){
+    if(wScroll > $('.section-footer').offset().top - ($(window).height()/1.7)) {
+        $('.icon-circle').each(function(i){
 
           setTimeout(function(){
-            $('.social-icon').eq(i).addClass('is-showing');
+            $('.icon-circle').eq(i).addClass('is-showing');
           }, 150 * (i+1));
         });
       }
 // button appearing when scroll into section
-    var sectionNames = ['section-1-header', 'section-2-about'];
+    var sectionNames = ['section-header', 'section-about'];
     var i;
 
     for (i = 0; i < sectionNames.length; i++) {
@@ -47,22 +48,9 @@ $(document).ready(function(){
     }
 
   });
-  // opening work section
-  $('.view-work').on('click',function (e) {
-      e.preventDefault();
-      $('.work-subsections').slideToggle();
-
-        var target = this.hash;
-        var $target = $('a[href="#subsections"]');
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top + 200
-        }, 200, 'swing');
-    });
-
 
 // galleries
-  $('.thumbox').on('click', function(e) {
+  $('.thumb-box').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
     var img = $(this).attr('src');
@@ -76,5 +64,30 @@ $(document).ready(function(){
       $('.gallery-active').remove();
     }, 200);
   });
+   
+// form validation
+  $("#email-form").validate({
+    
+        rules: {
+            name: "required",
+            message: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+
+        messages: {
+            name: "Please enter your name",
+            message: "Please enter your message",
+            email: "Please enter a valid email address"
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
 
 });
+
+

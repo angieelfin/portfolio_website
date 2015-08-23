@@ -1,0 +1,110 @@
+@import 'section-styles/about';
+
+@media screen and (max-width: 950px) {
+
+  .section-about {
+    background-position: center;
+
+    .section-heading {
+      position: relative;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .ghost-button {
+    width: 170px;
+    font-size: 14px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .section-about {
+    background-position: center;
+  }
+
+  .section-about:before {
+    height: 1000px;
+    left: -15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .section-about p {
+    font-size: 14px;
+  }
+
+  .section-about:before {
+    height: 1000px;
+    left: -20%;
+  }
+}
+
+@media screen and (max-width: 668px) {
+
+  .section-about {
+    height: 600px;
+
+    p {
+      font-size: 12px;
+      padding: 0 5px;
+    }
+  }
+
+  .section-about-content {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .section-about {
+    background-position: 0%;
+    height: 820px;
+
+    .section-about-content {
+      max-width: 100%;
+      padding-top: 60%;
+    }
+
+    &:before {
+      transform: rotate(-15deg);
+      top: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  
+  .section-about {
+    background-size: 190%;
+  }
+  
+  .section-heading {
+    font-size: 50px !important;
+  }
+}
+
+
+@media screen and (max-width: 460px) {
+
+  .section-about {
+    background-repeat: no-repeat;
+    background-size: 270%;
+
+    .section-about-content {
+      padding-top: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-about-content {
+    padding-top: 100%;
+  }
+}
