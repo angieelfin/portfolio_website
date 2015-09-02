@@ -5,7 +5,7 @@
     background-color: rgba(255, 255, 255, .6);
   }
 
-  .section-work-content {
+  .work-content {
     position: relative;
     color: $alt;
     text-align: center;
@@ -23,11 +23,6 @@
     z-index: 1;
   }
 
-  .section-subtitle {
-    font-size: 20px;
-    margin: 30px 0 15px 0;
-  }
-
   button {
     opacity: 1;
   }
@@ -35,6 +30,7 @@
 
 .section-work:after {
   @include triangle-pseudoclass;
+  
   right: -10%;
   top: -20%;
   transform: rotate(65deg);

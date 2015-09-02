@@ -1,33 +1,38 @@
-button,
-button::after {
+.button,
+.button::after {
   transition: all .3s;
 }
 
-button {
+.button {
+  text-decoration: none;
+  margin: 0 auto;
+  display: table;
   background: none;
   border: 2px solid $alt;
   color: $alt;
   font-size: $basic-font-big;
   width: 200px;
-  height: 60px;
+  box-sizing: border-box;
+  padding: 15px 0;
+  letter-spacing: 1px;
   position: relative;
   cursor: pointer;
 
   a {
     color: $alt;
-    text-decoration: none;
+    
   }
 }
 
-button::before,
-button::after {
+.button::before,
+.button::after {
   background: $alt;
   content: '';
   position: absolute;
   z-index: -1;
 }
 
-button:hover {
+.button:hover {
   color: $white;
   z-index: 1;
 
@@ -36,15 +41,15 @@ button:hover {
   }
 }
 
-button:focus {
+.button:focus {
   outline: none;
 }
 
-.ghost-button {
+.button-ghost {
   overflow: hidden;
 }
 
-.ghost-button::after {
+.button-ghost::after {
   height: 100%;
   left: -35%;
   top: 0;
@@ -54,19 +59,18 @@ button:focus {
   width: 0;
 }
 
-.ghost-button:hover:after {
+.button-ghost:hover:after {
   height: 100%;
   width: 135%;
 }
 
-
-
-.send-button {
+.button-send {
+  display: inline;
   background-color: $white;
   border: 2px solid $white;
   color: $brand;
+  width: inherit;
   margin-top: 2 * $base-unit;
-  width: auto;
 
   &::before,
   &::after {
@@ -77,18 +81,32 @@ button:focus {
   }
 }
 
-.small-button {
+.button-small {
   font-size: 15px;
-  width: 150px;
-  height: 40px;
-  padding: 0;
+  width: 290px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  padding: 15px 0;
+  display: block;
 }
-@media screen and (max-width: 528px) {
 
+// gallery close button 
+.button-close {
+  position: fixed;
+  top: 0;
+  right: .5em;
+  font-size: 2.5em;
+  text-decoration: none;
+  color: $alt;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  z-index: 99999;
+  cursor: pointer;
 }
 
 // menu button
-.menu-button {
+.js-menu-button {
   margin: 30px 20px;
   float: right;
   width: 56px;
@@ -103,7 +121,7 @@ button:focus {
     width: 52px;
     animation: scales .6s;
 
-    .bar-left {
+    .bar-half-left {
       width: 52%;
       height: 4px;
       background: $alt;
@@ -113,7 +131,7 @@ button:focus {
       transition: all .2s;
     }
 
-    .bar-right {
+    .bar-half-right {
       width: 52%;
       height: 4px;
       background: $alt;
@@ -134,21 +152,21 @@ button:focus {
   }
 }
 
-.menu-button.active {
+.js-menu-button.active {
   padding-top: 5px;
   box-sizing: border-box;
   
   .bar-top {
     animation: scales .5s;
 
-    .bar-left {
+    .bar-half-left {
       transform: rotate(45deg) scale(1.2);
       left: 4px;
       top: 0;
       border-radius: 5px;
     }
 
-    .bar-right {
+    .bar-half-right {
       transform: rotate(-45deg) scale(1.2);
       right: 4px;
       top: 1px;
@@ -163,14 +181,14 @@ button:focus {
   .bar-bottom {
     animation: scales .5s;
 
-    .bar-left {
+    .bar-half-left {
       transform: rotate(-45deg) scale(1.2);
       left: 4px;
       top: 2px;
       border-radius: 5px;
     }
 
-    .bar-right {
+    .bar-half-right {
       transform: rotate(45deg) scale(1.2);
       right: 4px;
       top: 1px;

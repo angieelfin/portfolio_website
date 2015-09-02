@@ -10,7 +10,7 @@
     right: 30px;
   }
 
-  .section-contact-content {
+  .contact-content {
     position: relative;
     color: $white;
     text-align: center;
@@ -39,36 +39,4 @@
   font-family: 'Lato';
   font-size: 14px;
   text-align: left;
-}
-
-// form styling
-.form {
-  display: flex;
-  flex-direction: column;
-  background-color: $brand;
-  width: 350px;
-}
-
-.form-input {
-  background-color: $brand;
-  border: 2px solid $white;
-  padding: $base-unit 2 * $base-unit;
-  margin: $base-unit 0;
-  width: auto;
-  font-size: $basic-font-small;
-  font-family: 'bonvenocflight';
-  font-weight: 300;
-  color: $white;
-  outline: none;
-}
-
-.input-message {
-  height: 170px;
-}
-
-// input color
-
-::-webkit-input-placeholder {
-  color: $white;
-  opacity: .8;
 }
