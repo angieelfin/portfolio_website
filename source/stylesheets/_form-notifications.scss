@@ -4,3 +4,17 @@
   font-size: 13px;
   text-align: left;
 }
+
+.form-error,
+.form-success {
+  position: relative;
+  right: 50px;
+  z-index: 2;
+  color: red;
+  font-size: 16px;
+  font-family: 'bonvenocflight';
+}
+
+.form-success {
+  color: $white;
+}

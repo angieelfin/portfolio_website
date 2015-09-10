@@ -20,7 +20,6 @@
 
   a {
     color: $alt;
-    
   }
 }
 
@@ -71,13 +70,10 @@
   color: $brand;
   width: inherit;
   margin-top: 2 * $base-unit;
-
-  &::before,
-  &::after {
-    background: $brand;
-    content: '';
-    position: absolute;
-    z-index: -1;
+  
+  &:hover {
+    background: none;
+    color: white;
   }
 }
 
