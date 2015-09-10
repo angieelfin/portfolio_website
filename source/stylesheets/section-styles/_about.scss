@@ -6,7 +6,7 @@
     background-color: rgba(255, 255, 255, .3);
   }
 
-  .section-about-content {
+  .about-content {
     color: $alt;
     text-align: center;
     max-width: 50%;
@@ -22,15 +22,18 @@
     font-family: 'Lato';
     padding-left: 2 * $base-unit;
     margin: $base-unit;
+    line-height: 23px;
+    letter-spacing: .3px;
   }
 
-  .ghost-button {
-    margin-top: 2* $base-unit;
+  .button-ghost {
+    margin-top: 2 * $base-unit;
   }
 }
 
 .section-about:before {
   @include triangle-pseudoclass;
+
   right: -57%;
   top: 40%;
   transform: rotate(-65deg);

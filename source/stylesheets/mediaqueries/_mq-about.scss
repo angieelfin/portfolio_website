@@ -1,4 +1,9 @@
 @import 'section-styles/about';
+@media screen and (max-width: 989px) and (min-width: 950px) {
+  .section-about {
+    height: 750px;
+  }
+}
 
 @media screen and (max-width: 950px) {
 
@@ -11,6 +16,7 @@
 
     p {
       font-size: 14px;
+      line-height: 1.2;
     }
   }
 
@@ -56,7 +62,7 @@
     }
   }
 
-  .section-about-content {
+  .about-content {
     max-width: 70%;
   }
 }
@@ -67,7 +73,7 @@
     background-position: 0%;
     height: 820px;
 
-    .section-about-content {
+    .about-content {
       max-width: 100%;
       padding-top: 60%;
     }
@@ -97,14 +103,14 @@
     background-repeat: no-repeat;
     background-size: 270%;
 
-    .section-about-content {
+    .about-content {
       padding-top: 85%;
     }
   }
 }
 
 @media screen and (max-width: 320px) {
-  .section-about-content {
+  .about-content {
     padding-top: 100%;
   }
 }

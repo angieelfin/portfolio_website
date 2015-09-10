@@ -5,7 +5,7 @@ body {
 h1,
 h2,
 h3,
-button {
+.button {
   font-family: 'bonvenocflight';
   text-transform: uppercase;
   margin: 0;
@@ -55,13 +55,20 @@ button {
 }
 
 // ghost button appearing
-.ghost-button {
+.button-ghost {
   opacity: 0;
   transform: translate (0, -20px);
+}
 
-  &.btn-appear {
-    opacity: 1;
-    transform: translate (0, 0);
-    transition: all .5s ease-in-out;
+.btn-appear {
+  opacity: 1;
+  transform: translate (0, 0);
+  transition: all .5s ease-in-out;
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }

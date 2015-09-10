@@ -1,8 +1,14 @@
 @import 'section-styles/header';
 
+@media screen and (max-width: 1170px){
+  .logo-header {
+  padding-left: 10 * $base-unit;
+}
+
+}
 @media screen and (max-width: 1024px) {
 
-  .section-header {
+  .header {
     height: 768px;
   }
 
@@ -14,18 +20,18 @@
 
 @media screen and (max-width: 940px) {
 
-  .section-header {
+  .header {
     height: 640px;
   }
 
-  .section-header:before {
+  .header:before {
     left: 20%;
     transform: rotate(45deg);
     height: 300px;
     width: 200%;
   }
 
-  .section-header:after {
+  .header:after {
     right: 35%;
     top: 28%;
     transform: rotate(45deg);
@@ -55,7 +61,7 @@
 
 @media screen and (max-width: 596px) {
 
-  .section-header-content {
+  .header-content {
     margin-top: 30%;
   }
 
@@ -67,14 +73,14 @@
     padding-left: 0px
   }
 
-  .section-header:before {
+  .header:before {
     left: 30%;
     transform: rotate(45deg);
     height: 300px;
     width: 200%;
   }
 
-  .section-header:after {
+  .header:after {
     right: 35%;
     top: 40%;
     transform: rotate(45deg);
@@ -90,7 +96,7 @@
 
 @media screen and (max-width: 480px) {
 
-  .section-header-content {
+  .header-content {
     margin-top: 40%;
   }
 
@@ -101,7 +107,7 @@
     width: 200%;
   }
 
-  .section-header:after {
+  .header:after {
     right: 35%;
     top: 60%;
     transform: rotate(45deg);
@@ -116,7 +122,7 @@
 
 @media screen and (max-width: 365px) {
 
-  .section-header:before {
+  .header:before {
     left: 20%;
     top: -10%;
     transform: rotate(45deg);
@@ -124,7 +130,7 @@
     width: 200%;
   }
 
-  .section-header:after {
+  .header:after {
     right: 35%;
     top: 60%;
     transform: rotate(45deg);
