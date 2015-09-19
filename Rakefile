@@ -1,5 +1,9 @@
+require "rake"
+
 namespace :assets do
+  desc "Precompile the assets"
   task :precompile do
-    sh 'middleman build'
+    require './app'
+    App.compile_assets
   end
 end

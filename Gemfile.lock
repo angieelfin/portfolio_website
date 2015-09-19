@@ -101,6 +101,7 @@ GEM
       mail (>= 2.0)
     puma (2.12.3)
     rack (1.6.4)
+    rack-cors (0.4.0)
     rack-livereload (0.3.16)
       rack
     rack-protection (1.5.3)
@@ -156,6 +157,7 @@ DEPENDENCIES
   middleman-slim (~> 0.2.2)
   pony (~> 1.11)
   puma
+  rack-cors
   scss_lint
   sinatra (~> 1.4.6)
   tzinfo-data
