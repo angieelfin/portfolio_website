@@ -2,6 +2,7 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
+gem "puma"
 gem "middleman", "~>3.3.12"
 gem "middleman-slim", "~>0.2.2"
 gem "jquery-middleman", "~>3.1.2"

@@ -75,6 +75,8 @@ $(document).ready(function(){
     $.ajax({
       url: 'contact',
       type: 'POST',
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
       data: {
         email: $emailInput.val(),
         name: $nameInput.val(),

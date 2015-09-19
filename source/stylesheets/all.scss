@@ -1,10 +1,10 @@
 @charset 'utf-8';
 
-// import variables 
-@import 'variables';
-@import 'basic-styles';
+// import variables
+@import '_variables';
+@import '_basic-styles';
 @import 'fonts';
-@import 'utilities';
+@import '_utilities';
 @import '_form-notifications';
 
 // import media queries
@@ -16,10 +16,10 @@
 @import 'mediaqueries/_mq-basic-styles';
 @import 'mediaqueries/_mq-galleries';
 
-// import components 
+// import components
 @import 'components/buttons';
 
-// import section styles 
+// import section styles
 @import 'section-styles/_header';
 @import 'section-styles/_menu';
 @import 'section-styles/_about';
