@@ -7,6 +7,8 @@ gem "middleman-slim", "~>0.2.2"
 gem "jquery-middleman", "~>3.1.2"
 gem "pony", "~>1.11"
 gem "sinatra", "~>1.4.6"
+gem "dotenv", "~>2.0.2"
+gem "pony", "~>1.11"
 gem "scss_lint", require: false
 
 # Live-reloading plugin

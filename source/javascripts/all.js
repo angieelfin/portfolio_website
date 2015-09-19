@@ -1,8 +1,9 @@
 //= require_tree .
 //= require jquery
+
 $(document).ready(function(){
 
-// navigation smooth scrolling 
+// navigation smooth scrolling
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
@@ -15,7 +16,7 @@ $(document).ready(function(){
           window.location.hash = target;
       });
   });
- 
+
 
 // menu icon animation
 
@@ -64,30 +65,43 @@ $(document).ready(function(){
       $('.gallery-active').remove();
     }, 200);
   });
-   
-// form validation
-  $("#email-form").validate({
-    
-        rules: {
-            name: "required",
-            message: "required",
-            email: {
-                required: true,
-                email: true
-            }
-        },
 
-        messages: {
-            name: "Please enter your name",
-            message: "Please enter your message",
-            email: "Please enter a valid email address"
-        },
-        
-        submitHandler: function(form) {
-            form.submit();
-        }
+  $('.form').on('submit', function(event) {
+    var $emailInput = $("[name='email']")
+    var $nameInput = $("[name='name']")
+    var $messageInput = $("[name='message']")
+    var $errorMessage = $('.form-error')
+
+    $.ajax({
+      url: 'contact',
+      type: 'POST',
+      data: {
+        email: $emailInput.val(),
+        name: $nameInput.val(),
+        body: $messageInput.val()
+      },
+    }).done(function() {
+      $('.send-button').remove();
+
+      $(".form-input").each(function(i, input) {
+        $(input).val("")
+      });
+
+      if ($errorMessage.length > 0) {
+        $('.form-error').remove()
+      }
+
+      $('.section-contact-content').
+        append('<p class="form-success">Thank you! Your message was successfully send!</p>');
+
+    }).fail(function() {
+      if (!$errorMessage.length > 0) {
+
+        $('.section-contact-content').
+          append('<p class="form-error">Oops! Something went wrong, please try again.</p>');
+      }
     });
 
+    event.preventDefault();
+  });
 });
-
-
