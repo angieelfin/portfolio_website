@@ -2,10 +2,12 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-ruby '2.2.2.'
+ruby '2.2.2'
 
 gem "puma"
 gem "roda"
+gem "json"
+gem "tilt"
 gem "slim"
 gem "sass"
 gem "pony", "~>1.11"

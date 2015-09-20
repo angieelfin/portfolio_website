@@ -67,42 +67,43 @@ $(document).ready(function(){
   });
 
   $('.form').on('submit', function(event) {
-    var $emailInput = $("[name='email']")
-    var $nameInput = $("[name='name']")
-    var $messageInput = $("[name='message']")
-    var $errorMessage = $('.form-error')
+    var $emailInput = $("[name='email']");
+    var $nameInput = $("[name='name']");
+    var $messageInput = $("[name='message']");
+    var $errorMessage = $('.form-error');
 
     $.ajax({
-      url: 'contact',
+      url: '/contact',
       type: 'POST',
-      contentType: "application/json; charset=utf-8",
-      dataType: "jsonp",
+      dataType: "json",
+      async: true,
+      jsonp: false,
       data: {
         email: $emailInput.val(),
         name: $nameInput.val(),
         body: $messageInput.val()
       },
-    }).done(function() {
-      $('.send-button').remove();
+    })
+    .done(function(data) {
+        $('.send-button').remove();
 
-      $(".form-input").each(function(i, input) {
-        $(input).val("")
-      });
+        $(".form-input").each(function(i, input) {
+          $(input).val("")
+        });
 
-      if ($errorMessage.length > 0) {
-        $('.form-error').remove()
-      }
-
-      $('.section-contact-content').
-        append('<p class="form-success">Thank you! Your message was successfully send!</p>');
-
-    }).fail(function() {
-      if (!$errorMessage.length > 0) {
+        if ($errorMessage.length > 0) {
+          $('.form-error').remove()
+        }
 
         $('.section-contact-content').
-          append('<p class="form-error">Oops! Something went wrong, please try again.</p>');
+          append('<p class="form-success">Thank you! Your message was successfully send!</p>');
+    })
+    .error(function(xhr, err, status) {
+      if (!$errorMessage.length > 0) {
+        $('.section-contact-content')
+        .append('<p class="form-error">Oops! Something went wrong, please try again.</p>');
       }
-    });
+    })
 
     event.preventDefault();
   });
