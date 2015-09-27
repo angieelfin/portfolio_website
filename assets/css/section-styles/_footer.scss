@@ -1,4 +1,4 @@
-.section-footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,15 +30,16 @@
   border-radius: 50%;
   display: inline-table;
   margin: 0 $base-unit;
-  transform: translate(-20px);
   opacity: 0;
+  transform: translate(-20px);
 
   &:hover {
     border: 2px solid $brand;
-    transition: all .1s ease;
+    transition: all .2s ease-in-out;
 
     .social-icon {
       color: $brand;
+      transition: all .2s ease-in-out;
     }
   }
 
@@ -59,7 +60,9 @@
   padding-right: 3px;
 }
 
-.rights-paragraph {
+.footer-paragraph {
   position: relative;
   top: 4 * $base-unit;
+  font-family: 'Lato';
+  font-size: 12px;
 }

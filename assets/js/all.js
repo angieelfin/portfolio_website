@@ -20,16 +20,16 @@ $(document).ready(function(){
 
 // menu icon animation
 
-  $('.menu-button').on('click', function(){
+  $('.js-menu-button').on('click', function(){
     $(this).toggleClass('active');
-    $('.menu').toggleClass('js-menu-active');
+    $('.menu').toggleClass('menu-active');
   });
 
 // footer icons animation
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
-    if(wScroll > $('.section-footer').offset().top - ($(window).height()/1.7)) {
+    if(wScroll > $('.footer').offset().top - ($(window).height()/1.7)) {
         $('.icon-circle').each(function(i){
 
           setTimeout(function(){

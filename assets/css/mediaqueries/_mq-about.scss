@@ -1,3 +1,9 @@
+@media screen and (max-width: 989px) and (min-width: 950px) {
+  .section-about {
+    height: 750px;
+  }
+}
+
 @media screen and (max-width: 950px) {
 
   .section-about {
@@ -9,6 +15,7 @@
 
     p {
       font-size: 14px;
+      line-height: 1.2;
     }
   }
 
@@ -54,7 +61,7 @@
     }
   }
 
-  .section-about-content {
+  .about-content {
     max-width: 70%;
   }
 }
@@ -65,7 +72,7 @@
     background-position: 0%;
     height: 820px;
 
-    .section-about-content {
+    .about-content {
       max-width: 100%;
       padding-top: 60%;
     }
@@ -78,11 +85,11 @@
 }
 
 @media screen and (max-width: 568px) {
-
+  
   .section-about {
     background-size: 190%;
   }
-
+  
   .section-heading {
     font-size: 50px !important;
   }
@@ -95,14 +102,14 @@
     background-repeat: no-repeat;
     background-size: 270%;
 
-    .section-about-content {
+    .about-content {
       padding-top: 85%;
     }
   }
 }
 
 @media screen and (max-width: 320px) {
-  .section-about-content {
+  .about-content {
     padding-top: 100%;
   }
 }

@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 890px) {
 
   .section-contact {
@@ -26,7 +27,7 @@
 @media screen and (max-width: 596px) {
 
   .section-contact {
-    .section-contact-content {
+    .contact-content {
       float: left;
       max-width: 100%;
       margin-left: 15%;
@@ -37,17 +38,14 @@
 @media screen and (max-width: 480px) {
 
   .section-contact {
-    .section-contact-content {
+    .contact-content {
       padding-top: $base-unit;
+      margin-left: 10%;
     }
   }
 
-  .form-input {
-    width: 250px;
-  }
-
-  .send-button {
-    width: 295px !important;
+  .form {
+    width: 300px !important;
   }
 }
 
@@ -55,15 +53,11 @@
 
   .section-contact {
    .section-heading {
+      margin-left: 10px;
       font-size: 45px !important;
     }
   }
-
-  .form-input {
-    width: 200px;
-  }
-
-  .send-button {
-    width: 245px !important;
+  .form {
+    width: 250px !important;
   }
 }
