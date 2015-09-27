@@ -1,13 +1,13 @@
 @media (max-width: 810px) {
 
-  .illustrations-gallery,
-  .branding-gallery,
-  .web-gallery {
+  .gallery-illustrations,
+  .gallery-branding,
+  .gallery-web {
     &:before {
       display: none;
     }
   }
-
+  
   .gallery-heading {
     text-align: center;
     margin: 20px 0 !important;
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 480px) {
-
+  
   .gallery {
     max-width: 100%;
   }
@@ -32,14 +32,14 @@
   }
 }
 
-.gallery-site {
+.gallery-section {
   overflow: hidden;
   position: relative;
 }
 
-.illustrations-gallery,
-.branding-gallery,
-.web-gallery {
+.gallery-illustrations,
+.gallery-branding,
+.gallery-web {
   overflow: hidden;
   position: static;
 
@@ -56,9 +56,9 @@
 }
 
 @media (max-width: 965px) {
-  .illustrations-gallery,
-  .branding-gallery,
-  .web-gallery {
+  .gallery-illustrations,
+  .gallery-branding,
+  .gallery-web {
     &:before {
       transform: rotate(-65deg);
       right: -30%;

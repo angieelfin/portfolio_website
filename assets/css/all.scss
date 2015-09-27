@@ -7,17 +7,11 @@
 @import '_utilities';
 @import '_form-notifications';
 
-// import media queries
-@import 'mediaqueries/_mq-header';
-@import 'mediaqueries/_mq-about';
-@import 'mediaqueries/_mq-work';
-@import 'mediaqueries/_mq-contact';
-@import 'mediaqueries/_mq-footer';
-@import 'mediaqueries/_mq-basic-styles';
-@import 'mediaqueries/_mq-galleries';
 
 // import components
-@import 'components/buttons';
+@import 'components/_buttons';
+@import 'components/_form';
+@import 'components/_input';
 
 // import section styles
 @import 'section-styles/_header';
@@ -28,6 +22,15 @@
 @import 'section-styles/_footer';
 @import '_galleries.scss';
 
-// import fontello icons
+// import media queries
+@import 'mediaqueries/_mq-header';
+@import 'mediaqueries/_mq-about';
+@import 'mediaqueries/_mq-work';
+@import 'mediaqueries/_mq-contact';
+@import 'mediaqueries/_mq-footer';
+@import 'mediaqueries/_mq-basic-styles';
+@import 'mediaqueries/_mq-galleries';
 
-@import 'social-icons/fontello.scss';
+
+// import fontello icons
+@import 'social-icons/fontello';
