@@ -1,5 +1,5 @@
-//= require_tree .
 //= require jquery
+//= require_tree .
 
 $(document).ready(function(){
 
@@ -67,13 +67,12 @@ $(document).ready(function(){
     },
   });
 
-// galleries
   $('.thumb-box').on('click', function(e) {
     e.preventDefault();
-    var id = $(this).attr('data-id');
+
     var img = $(this).attr('src');
 
-      $('.gallery').append('<div class="gallery-active"><img src="' + img + '" /><span class="close"">&times;</span></div>');
+    $('.gallery').append('<div class="gallery-active"><img src="' + img + '"/><span class="close">&times;</span></div>');
   });
 
   $('.gallery').delegate('.close', 'click', function() {
@@ -124,6 +123,5 @@ $(document).ready(function(){
         }
       })
     }
-
   });
 });
