@@ -21,9 +21,25 @@ class App < Roda
 
   route do |r|
     r.assets
+
     r.root do
       view("index")
     end
+
+    r.on "gallery" do
+      r.on "web" do
+        view("gallery/web")
+      end
+
+      r.on "graphic" do
+        view("gallery/graphic")
+      end
+
+      r.on "art" do
+        view("gallery/art")
+      end
+    end
+
     r.on "contact" do
       r.post do
         payload = r.body.read.to_s
