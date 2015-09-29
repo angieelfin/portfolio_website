@@ -50,6 +50,7 @@
   right: 0;
   background-color: rgba(0, 0, 0, .8);
   color: $white;
+  padding: 20px;
 
   a {
     display: block;
@@ -115,4 +116,13 @@
   z-index: 1;
   color: $alt;
   margin: 20px 0 50px 50px;
+}
+
+.arrow-back {
+  font-size: 30px;
+  color: $alt;
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+  left: 10px;
 }

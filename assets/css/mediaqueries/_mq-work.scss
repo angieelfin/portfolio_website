@@ -1,32 +1,26 @@
-
-@media screen and (max-width: 768px) and (min-width: 480px) {
-
-  .social-icon {
-    opacity: 1;
+@media screen and (max-width: 669px) {
+  .section-work {
+    height: 500px;
   }
 }
 
-@media screen and (max-width: 480px) {
-
-  .social-icons {
-    font-size: 16px;
+@media screen and (max-width: 568px) {
+  .section-title {
+    font-size: 50px !important;
+  }
+  .section-work:after {
+    top: 10%;
   }
 }
 
-@media screen and (max-width: 383px) {
-
-  .logo {
-    margin-top: 2 * $base-unit;
+@media screen and (max-width: 440px) {
+  .section-work {
+    background: $white !important;
   }
-  
-  .has-inline-content {
-    display: inline-flex;
-    margin: 6px 0;
-  }
+}
 
-  .social-icons {
-    max-width: 200px;
-    margin: 10px auto;
-    padding: 0;
+@media screen and (max-width: 340px) {
+  .work-content {
+    margin-left: -15px !important;
   }
 }
