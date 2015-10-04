@@ -1,3 +1,15 @@
+@media (max-width: 965px) {
+  .gallery-illustrations,
+  .gallery-branding,
+  .gallery-web {
+    &:before {
+      transform: rotate(-65deg);
+      right: -30%;
+      top: 22%;
+    }
+  }
+}
+
 @media (max-width: 810px) {
 
   .gallery-illustrations,
@@ -30,6 +42,9 @@
     width: 100%;
     height: auto;
   }
+  .arrow-back {
+    left: 5px;
+  }
 }
 
 .gallery-section {
@@ -46,6 +61,7 @@
   &:before {
     @include triangle-pseudoclass;
     background-color: lighten($alt, 45%);
+    -webkit-transform: rotate(-75deg);
     transform: rotate(-75deg);
     height: 800px;
     width: 300%;
@@ -55,14 +71,4 @@
   }
 }
 
-@media (max-width: 965px) {
-  .gallery-illustrations,
-  .gallery-branding,
-  .gallery-web {
-    &:before {
-      transform: rotate(-65deg);
-      right: -30%;
-      top: 22%;
-    }
-  }
-}
+

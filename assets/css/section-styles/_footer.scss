@@ -1,4 +1,7 @@
 .footer {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +34,7 @@
   display: inline-table;
   margin: 0 $base-unit;
   opacity: 0;
+  -webkit-transform: translate(-20px);
   transform: translate(-20px);
 
   &:hover {
@@ -45,6 +49,7 @@
 
   &.is-showing {
     opacity: 1;
+    -webkit-transform: translate(0);
     transform: translate(0);
     transition: all .3s ease-in-out;
   }

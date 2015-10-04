@@ -84,6 +84,7 @@
   z-index: 9999;
   width: 100vw !important;
   margin: auto;
+  -webkit-animation: in 200ms 1 ease;
   animation: in 200ms 1 ease;
   overflow: auto;
   background: $white;
@@ -96,17 +97,20 @@
 }
 
 .inactive {
+  -webkit-animation: in 200ms 1 ease;
   animation: out 200ms 1 ease;
 }
 
 @keyframes in {
   0% {
+    -webkit-transform: scale(.2);
     transform: scale(.2);
   }
 }
 
 @keyframes out {
   100% {
+    -webkit-transform: scale(.05);
     transform: scale(.05);
   }
 }
@@ -123,6 +127,10 @@
   color: $alt;
   text-decoration: none;
   position: relative;
-  top: 50px;
-  left: 10px;
+  left: 50px;
+}
+
+.gallery-section {
+  overflow: hidden;
+  position: relative;
 }

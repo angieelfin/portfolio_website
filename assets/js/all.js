@@ -37,17 +37,6 @@ $(document).ready(function(){
           }, 150 * (i+1));
         });
       }
-// button appearing when scroll into section
-    var sectionNames = ['section-header', 'section-about'];
-    var i;
-
-    for (i = 0; i < sectionNames.length; i++) {
-
-      if(wScroll > $('.'+sectionNames[i]).offset().top) {
-        $('.'+sectionNames[i] + ' .ghost-button').addClass('btn-appear');
-      }
-    }
-
   });
 
   $("#email-form").validate({

@@ -78,6 +78,7 @@
     }
 
     &:before {
+      -webkit-transform: rotate(-15deg);
       transform: rotate(-15deg);
       top: 30%;
     }
