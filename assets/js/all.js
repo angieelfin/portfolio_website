@@ -25,20 +25,6 @@ $(document).ready(function(){
     $('.menu').toggleClass('menu-active');
   });
 
-// footer icons animation
-  $(window).scroll(function(){
-    var wScroll = $(this).scrollTop();
-
-    if(wScroll > $('.footer').offset().top - ($(window).height()/1.7)) {
-        $('.icon-circle').each(function(i){
-
-          setTimeout(function(){
-            $('.icon-circle').eq(i).addClass('is-showing');
-          }, 150 * (i+1));
-        });
-      }
-  });
-
   $("#email-form").validate({
     rules: {
         name: "required",
