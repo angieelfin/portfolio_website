@@ -21,11 +21,14 @@
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1800px) {
   body {
-    max-width: 1280px;
-    background: white;
+    max-width: 1500px;
+    background: $white;
     margin: 0 auto;
+  }
+  .section-bg {
+    background-attachment: scroll;
   }
 }
 
