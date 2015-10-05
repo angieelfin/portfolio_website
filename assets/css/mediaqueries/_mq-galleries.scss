@@ -46,29 +46,3 @@
     left: 5px;
   }
 }
-
-.gallery-section {
-  overflow: hidden;
-  position: relative;
-}
-
-.gallery-illustrations,
-.gallery-branding,
-.gallery-web {
-  overflow: hidden;
-  position: static;
-
-  &:before {
-    @include triangle-pseudoclass;
-    background-color: lighten($alt, 45%);
-    -webkit-transform: rotate(-75deg);
-    transform: rotate(-75deg);
-    height: 800px;
-    width: 300%;
-    z-index: 0;
-    right: -57%;
-    top: 25%;
-  }
-}
-
-
