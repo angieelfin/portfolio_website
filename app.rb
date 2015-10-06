@@ -8,6 +8,7 @@ Dotenv.load
 
 class App < Roda
   plugin :render, engine: "slim"
+  plugin :slash_path_empty
   plugin :static, ["/assets"]
   plugin :assets,
     css: %w(all.scss),
