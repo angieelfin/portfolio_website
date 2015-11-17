@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: bundle exec puma -e production -p 4200
+  volumes:
+    - .:/myapp
+  ports:
+    - "4200:4200"
