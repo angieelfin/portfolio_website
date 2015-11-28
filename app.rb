@@ -17,8 +17,7 @@ class App < Roda
     compiled_path: nil,
     precompiled: "compiled_assets.json",
     prefix: nil,
-    js:%w(jquery-2.1.4.js jquery-validate.js all.js)
-
+    js:%w(jquery-2.1.4.js jquery-validate.js ga.js all.js)
 
   route do |r|
     r.assets
