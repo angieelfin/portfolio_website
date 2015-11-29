@@ -8,7 +8,7 @@ GEM
     mime-types (2.6.1)
     pony (1.11)
       mail (>= 2.0)
-    puma (2.12.3)
+    puma (2.15.3)
     rack (1.6.4)
     roda (2.5.1)
       rack
@@ -26,8 +26,11 @@ DEPENDENCIES
   dotenv (~> 2.0.2)
   json
   pony (~> 1.11)
-  puma
+  puma (~> 2.15.3)
   roda
   sass
   slim
   tilt
+
+BUNDLED WITH
+   1.10.6
