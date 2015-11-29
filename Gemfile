@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
-gem "puma"
+gem "puma", "~>2.15.3"
 gem "roda"
 gem "json"
 gem "tilt"
