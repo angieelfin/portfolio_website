@@ -4,7 +4,7 @@ export default class Footer extends Component {
   render() {
     return (
         <div class="footer">
-        <img class="logo" src="./assets/images/logo.svg" />
+        <img class="logo" src="" />
         <p>
         Find me on:
       </p>

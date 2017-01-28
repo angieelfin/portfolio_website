@@ -30,7 +30,7 @@ export default class Header extends Component {
 
       </div>
       <div class="header-content push-down-content">
-      <img alt="logo image" class="logo logo-header" src="../assets/images/logo.svg"/>
+      <img alt="logo image" class="logo logo-header" src=""/>
       <h3 class="subheading push-down-unit">
       Agata Kubiak
     </h3>
