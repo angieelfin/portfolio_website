@@ -1,6 +1,22 @@
 div class="header section-bg" id="home"
   div class="overlay section-overlay"
-    ==> render "sections/header-menu"
+
+    div class="js-menu-button"
+      div class="bar-top"
+        div class="bar-half-left"
+        div class="bar-half-right"
+      div class="bar-middle"
+      div class="bar-bottom"
+        div class="bar-half-left"
+        div class="bar-half-right"
+    div class="menu"
+      a class="menu-item subheading" href="#work"
+        | Work
+      a class="menu-item subheading" href="#about"
+        | About
+      a class="menu-item subheading" href="#contact"
+        | Contact
+
     div class="header-content push-down-content"
       img class="logo logo-header" src="../assets/images/logo.svg" alt="logo image"
       h3 class="subheading push-down-unit"
