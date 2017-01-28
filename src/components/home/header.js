@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import ScrollTo from './../scrollTo';
 
 export default class Header extends Component {
   toggleClass = (event) => {
@@ -23,15 +24,18 @@ export default class Header extends Component {
       </div>
       </div>
       <div class={isActive ? 'menu menu-active' : 'menu'}>
-      <a class="menu-item subheading" href="#work">Work</a><a class="menu-item subheading" href="#about">About</a><a class="menu-item subheading" href="#contact">Contact</a>
+      <ScrollTo href="#work" target="#work" duration="1000" classNames="menu-item subheading">Work</ScrollTo>
+      <ScrollTo href="#about" target="#about" duration="1000" classNames="menu-item subheading">About</ScrollTo>
+      <ScrollTo href="#contact" target="#contact" duration="1000" classNames="menu-item subheading">Contact</ScrollTo>
+
       </div>
       <div class="header-content push-down-content">
-      <img alt="logo image" class="logo logo-header" src="../assets/images/logo.svg" />
+      <img alt="logo image" class="logo logo-header" src="../assets/images/logo.svg"/>
       <h3 class="subheading push-down-unit">
       Agata Kubiak
     </h3>
       <h1 class="heading header-title">
-      Portfolio<a class="button button-ghost" href="#work">view work</a>
+      Portfolio<ScrollTo classNames="button button-ghost" target="#work" href="#work" duration='1000'>view work</ScrollTo>
       </h1>
       </div>
       </div>

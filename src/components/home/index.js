@@ -9,10 +9,12 @@ import Contact from './contact';
 import Footer from './footer';
 
 
+
 export default class Home extends Component {
   render() {
     return (
-      <div>
+        <div>
+
         <Header/>
         <About/>
         <Work/>
